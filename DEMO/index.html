@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <meta charset="urf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="public/css/style.css">
+    <link rel="stylesheet" type="text/css" href="public/css/stylemobile.css">
+    <link rel="stylesheet" href="public/css/fontawesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+    <div class="full-backgrond">
+        <div class="head-top">
+            <div class="container1">
+                <div class="row">
+                    <div class="head-top-left">
+                        <a href="#">
+                            <img src="public/images/logo/logo.jpg" alt="logo">
+                        </a>
+                    </div>
+                    <div id="head-top-right">
+                        <ul class="menu">
+                            <li class="button-right"><a href="#">đăng nhập</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <nav>
+                    <label for="btn" class="icon">
+                        <span class="fa fa-bars"></span>
+                    </label>
+                    <input type="checkbox" id="btn">
+                    <ul>
+                        <li><a href="#">Trang chủ</a></li>
+                        <li>
+                            <label for="btn-1" class="show">Danh mục +</label>
+                            <a href="#">Danh mục</a>
+                            <input type="checkbox" id="btn-1">
+                            <ul>
+                                <li><a href="#">Pages</a></li>
+                                <li><a href="#">Elements</a></li>
+                                <li><a href="#">Icons</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <label for="btn-2" class="show">Ship hộ +</label>
+                            <a href="#">Ship hộ</a>
+                            <input type="checkbox" id="btn-2">
+                            <ul>
+                                <li><a href="#">Web Design</a></li>
+                                <li><a href="#">App Design</a></li>
+                                <li>
+                                    <label for="btn-3" class="show">tin tức +</label>
+                                    <a href="#">tin tức <span class="fa fa-plus"></span></a>
+                                    <input type="checkbox" id="btn-3">
+                                    <ul>
+                                        <li><a href="#">Submenu-1</a></li>
+                                        <li><a href="#">Submenu-2</a></li>
+                                        <li><a href="#">Submenu-3</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Liên hệ:0975964681</a>
+                        </li>
+                    </ul>
+                </nav>
+                <script>
+                    $('.icon').click(function () {
+                        $('span').toggleClass("cancel");
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var nut = document.querySelector('div.icon i');
+            var mobile = document.querySelector('ul');
+            nut.addEventListener('click', function () {
+                mobile.classList.toggle('active');
+            })
+        })
+    </script>
+
+    <section class="introduce">
+
+        <div class="khoa-hoc">
+
+            <h3 style="text-align: center;">ĐĂNG KÍ KHOÁ HỌC</h3>
+            <form>
+                <label for="fname">EMAIL:</label><br>
+                <input type="text" id="fname" name="fname"><br>
+                <label for="fname">SĐT:</label><br>
+                <input type="text" id="fname" name="fname"><br>
+                <label for="fname">HỌ TÊN:</label><br>
+                <input type="text" id="fname" name="fname">
+            </form>
+        </div>
+        <div class="time-line">
+            <div class="rotate"></div>
+            <div class="dem">
+                <div>
+                    <div class="container">
+                        <h1 id="headline">Thời gian đăng kí khoá học</h1>
+                        <div id="countdown">
+                            <ul>
+                                <li><span id="days"></span>Ngày</li>
+                                <li><span id="hours"></span>Giờ</li>
+                                <li><span id="minutes"></span>Phút</li>
+                                <li><span id="seconds"></span>Giây</li>
+                            </ul>
+                        </div>
+                        <div class="message">
+                            <div id="content">
+                                <span class="emoji">🥳</span>
+                                <span class="emoji">🎉</span>
+                                <span class="emoji">🎂</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+            (function () {
+                const second = 1000,
+                    minute = second * 60,
+                    hour = minute * 60,
+                    day = hour * 24;
+
+                let birthday = "March 31, 2021 18:00:00",
+                    countDown = new Date(birthday).getTime(),
+                    x = setInterval(function () {
+
+                        let now = new Date().getTime(),
+                            distance = countDown - now;
+
+                        document.getElementById("days").innerText = Math.floor(distance / (day)),
+                            document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+                            document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+                            document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+
+                        //do something later when date is reached
+                        if (distance < 0) {
+                            let headline = document.getElementById("headline"),
+                                countdown = document.getElementById("countdown"),
+                                content = document.getElementById("content");
+
+                            headline.innerText = "Thời gian đăng kí đã kết thúc";
+                            countdown.style.display = "none";
+                            content.style.display = "block";
+
+                            clearInterval(x);
+                        }
+                        //seconds
+                    }, 0)
+            }());
+    </script>
+    <section class="main">
+        <h1 style="text-align: center;">KHAI GIẢNG KHOÁ HỌC TRỰC TIẾP </h1>
+        <div class="main-info">
+            <div class="info-left">
+                <ul>-Lớp học online đã chính thức bắt đầu!</ul>
+                <ul>-Thời gian khai giảng lớp TRỰC TIẾP : Từ ngày 01/03/2021 ( Tức 18 Âm Lịch).</ul>
+                <ul>-Còn chần chừ gì nữa, hãy nhanh chóng liên hệ với chúng tôi để được hỗ trợ và đăng kí sớm nhất nhé.
+                </ul>
+                <li>Khoá học cơ bản JDPANT 5.21</li>
+                <li>20 file bài giảng chi tiết</li>
+                <li>-1 file thực hành, 1 file bài tập/bài giảng</li>
+                <li>-1 file giáo trình/bài giảng</li>
+                <li>-1 video/bài giảng</li>
+            </div>
+            <div class="info-right">
+                <img src="public/images/image.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="main-bottom">
+        <h1>HÃY ĐẾN VỚI KHOÁ HỌC CỦA CHÚNG TÔI</h1>
+    </section>
+    <section class="posts">
+        <h1>Bài viết và tin tức</h1>
+        <div class="content">
+            <div class="item-content">
+                <a href="#">
+                    <img src="public/images/tintuc/danh-bong-xe-o-to.jpg" alt="">
+                    <h1>Bệnh nhân cả người khỏe mạnh nhờ dùng 3 loại Fucoidan Nhật này</h1>
+                </a>
+                <p>11/10/99</p>
+                <a>
+                    Xe ô tô không những là phương tiện di chuyển đồng hành cùng chúng ta trên mọi nẻo
+                    đường mà hơn hết những chiếc xe này cũng là những người bạn của mỗi người.</a><br>
+                <button class="btn"><span>đọc tiếp</span></button>
+            </div>
+            <div class="item-content">
+                <a href="#">
+                    <img src="public/images/tintuc/danh-bong-xe-o-to.jpg" alt="">
+                    <h1>Bệnh nhân cả người khỏe mạnh nhờ dùng 3 loại Fucoidan Nhật này</h1>
+                </a>
+                <p>11/10/99</p>
+                <a>
+                    Xe ô tô không những là phương tiện di chuyển đồng hành cùng chúng ta trên mọi nẻo
+                    đường mà hơn hết những chiếc xe này cũng là những người bạn của mỗi người.</a><br>
+                <button class="btn"><span>đọc tiếp</span></button>
+            </div>
+            <div class="item-content">
+                <a href="#">
+                    <img src="public/images/tintuc/danh-bong-xe-o-to.jpg" alt="">
+                    <h1>Bệnh nhân cả người khỏe mạnh nhờ dùng 3 loại Fucoidan Nhật này</h1>
+                </a>
+                <p>11/10/99</p>
+                <a>
+                    Xe ô tô không những là phương tiện di chuyển đồng hành cùng chúng ta trên mọi nẻo
+                    đường mà hơn hết những chiếc xe này cũng là những người bạn của mỗi người.</a><br>
+                <button class="btn"><span>đọc tiếp</span></button>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="ft-lien-he">
+            <h2>Liên hệ</h2>
+            <p>CTY TNHH KỸ THUẬT HỌC</p>
+            <p>Địa chỉ: thông Vùng 5, xã Phổ Thuận, huyện Đức Phổ, tỉnh Quảng Ngãi</p>
+            <p>Điện thoại: 0976772213 – 0396138686</p>
+            <p>fan page, group facebook: Học Viện CNC</p>
+            <p>facebook cá nhân: Vọng Nguyễn</p>
+            <p>Youtube: Học Viện CNC</p>
+            <p>Website: hocviencnc</p>
+        </div>
+        <div class="ft-gioi-thieu">
+            <h2>GIỚI THIỆU</h2>
+            <p>CTY TNHH KỸ THUẬT HỌC VIỆN CNC: </p>
+            <p>Chuyên cung cấp các dòng máy cnc cao cấp, linh kiện chât lượng và là nơi đào tạo học viên uy tín</p>
+        </div>
+        <div class="ft-tai-khoan">
+            <h2>THÔNG TIN TÀI KHOẢN</h2>
+            <p>Tên ngân hàng: Vietcombank</p>
+            <p>Số tài khoản: 0271001052159</p>
+            <p>Chi nhánh: Quảng Ngãi</p>
+            <p>Chủ tài khoản: Nguyễn Tấn Vọng</p>
+        </div>
+    </footer>
+</body>
+
+</html>

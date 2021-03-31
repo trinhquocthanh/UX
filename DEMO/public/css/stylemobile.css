@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f2f2f2;
+}
+
+nav:after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+nav .logo {
+    float: left;
+    color: white;
+    font-size: 27px;
+    font-weight: 600;
+    line-height: 70px;
+    padding-left: 60px;
+}
+
+nav ul {
+    float: left;
+    margin-right: 40px;
+    list-style: none;
+    position: relative;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: white;
+    line-height: 70px;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 15px;
+}
+
+nav ul li a:hover {
+    color: rgb(255, 251, 0);
+    border-radius: 5px;
+    box-shadow: 0 0 5px #e4fd02, 0 0 10px #fffb00;
+}
+
+nav ul ul li a:hover {
+    box-shadow: none;
+}
+
+nav ul ul {
+    position: absolute;
+    top: 90px;
+    border-top: 3px solid cyan;
+    opacity: 0;
+    visibility: hidden;
+    transition: top .3s;
+}
+
+nav ul ul ul {
+    border-top: none;
+}
+
+nav ul li:hover>ul {
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+}
+
+nav ul ul li {
+    position: relative;
+    margin: 0px;
+    width: 150px;
+    float: none;
+    display: list-item;
+    background-color: rgb(255, 255, 255);
+    color: yellow;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+nav ul ul li a {
+    line-height: 50px;
+    color: rgb(255, 54, 4);
+}
+
+nav ul ul ul li {
+    position: relative;
+    top: -60px;
+    left: 150px;
+}
+
+.show,
+.icon {
+    display: none;
+}
+
+[id^=btn] {
+    display: none;
+}
+
+.fa-plus {
+    font-size: 15px;
+    margin-left: 40px;
+}
+
+@media all and (max-width: 968px) {
+    nav {
+        background: lightcoral;
+        margin: 0 auto;
+    }
+    nav ul {
+        margin-right: 0px;
+        float: left;
+    }
+    nav .logo {
+        padding-left: 30px;
+        width: 100%;
+    }
+    .show+a,
+    ul {
+        display: none;
+    }
+    nav ul li,
+    nav ul ul li {
+        display: block;
+        width: 100%;
+        background-color: lightcoral;
+    }
+    nav ul ul li a {
+        color: white;
+    }
+    nav ul li a:hover {
+        box-shadow: none;
+    }
+    .show {
+        display: block;
+        color: white;
+        font-size: 18px;
+        padding: 0 20px;
+        line-height: 70px;
+        cursor: pointer;
+    }
+    .show:hover {
+        color: cyan;
+    }
+    .icon {
+        display: block;
+        color: white;
+        position: absolute;
+        top: 0;
+        right: 40px;
+        line-height: 30px;
+        cursor: pointer;
+        font-size: 25px;
+        margin-top: 80px;
+    }
+    nav ul ul {
+        top: 70px;
+        border-top: 0px;
+        float: none;
+        position: static;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+    }
+    nav ul ul a {
+        padding-left: 40px;
+    }
+    nav ul ul ul a {
+        padding-left: 80px;
+    }
+    nav ul ul ul li {
+        position: static;
+    }
+    [id^=btn]:checked+ul {
+        display: block;
+    }
+    nav ul ul li {
+        border-bottom: 0px;
+    }
+    span.cancel:before {
+        content: '\f00d';
+    }
+}
+
+@media all and (max-width: 968px) {
+    .head-top {
+        width: 100%;
+        min-height: auto;
+    }
+    .introduce {
+        display: block;
+    }
+    .khoa-hoc {
+        margin-left: none;
+        width: 80%;
+        margin-top: 25%;
+    }
+    input[type=text] {
+        width: 90%;
+        margin-left: 12%;
+        box-sizing: border-box;
+    }
+    .time-line {
+        width: 80%;
+    }
+    .rotate {
+        margin-top: -50px;
+        width: 0;
+        height: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-top: 50px solid rgb(138, 21, 21);
+    
+    }
+    .time-line {
+        margin-left: 10%;
+        background: rgb(19, 13, 13);
+        border-top-right-radius: none;
+    }
+    .dem {
+        background: rgb(19, 13, 13);
+    }
+    /* dem*/
+}
+@media all and (max-width: 968px) {
+    /*MAIN*/
+
+    .main {
+        width: 100%;
+        margin-top: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        display: block;
+        line-height: 30px;
+        color: #9e3535;
+    }
+
+    .main-info {
+        display: grid;
+    }
+
+    .info-left {
+        padding-left: 3%;
+        margin-left: 6%;
+        width: 90%;
+    }
+
+    .info-right {
+        float: left;
+    }
+
+    .info-right img {
+        padding-left: 10%;
+        width: 90%;
+    }
+
+
+    /*main-bottom*/
+
+    .main-bottom {
+        margin-top: 10px;
+        width: 100%;
+        height: 200px;background: rgb(251,255,0);
+        background: linear-gradient(50deg, rgba(251,255,0,1) 0%, rgba(0,0,0,1) 82%);
+    }
+
+    .main-bottom h1 {
+        text-align: center;
+        color: rgb(255, 255, 255);
+        font-size: 200%;
+        padding:7%;
+    }
+}
+@media all and (max-width: 968px) {
+    .posts {
+        width: 100%;
+    }
+    
+    .content {
+        margin-top: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        width: 100%;
+        display: grid;
+        line-height: 30px;
+        color: #9e3535;
+    }
+    
+    .item-content {
+        width: 90%;
+        margin-bottom: 10%;
+        margin-left: 4.5%;
+    }
+    
+    .item-content a {
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    .item-content img {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        width: 100%;
+    }
+
+    .item-content h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #000000;
+        height: 19%;
+        font-size: 20px;
+    }
+}
+@media all and (max-width: 968px) {
+    footer {
+        display: grid;
+        margin-top: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        width: 100%;
+        line-height: 30px;
+        min-height: 250px;
+        background-color: black;
+        color: blanchedalmond;
+    }
+    
+    .ft-lien-he {
+        margin: 20px;
+    }
+    
+    .ft-gioi-thieu {
+        margin: 20px;
+    }
+    
+    .ft-tai-khoan {
+        margin: 20px;
+    }
+}
